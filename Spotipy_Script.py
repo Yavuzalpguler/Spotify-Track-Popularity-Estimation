@@ -8,7 +8,7 @@ import spotipy.util as util
 from json.decoder import JSONDecodeError
 import pandas as pd
 
-token = 'BQCyisILGluuO6jGiIxd9F3LCfJJ1dranLR52z0F2VfElJR7P1-sVhNHf_e03SNcWqLwGuKVigUvck8nID7xeEuRUbKFrsokcAIpgzqbj1BgVSQ9204-dR2NzJDJWBTvpO2y6Unm6ldwL0N-wXxU'
+token = '   """ Put your spotify API token here """   '
 
 
 spotifyObject = spotipy.Spotify(auth=token)
@@ -66,7 +66,7 @@ while True:
     i = input("Ok, what is the song's index ? ")
     i = int(i)
     json_obj = json.dumps(trackResults[i], sort_keys=True, indent=4)
-    with open('/Users/yguler/DATASCIENCE/SPOTIPY/Grup_7_Data_Science/data.json', 'w') as outfile:
+    with open('""" HERE: Put your directory  which you want to save the data.json file to """', 'w') as outfile:
         outfile.write("[")
         outfile.write(json_obj)
         outfile.write("]")
